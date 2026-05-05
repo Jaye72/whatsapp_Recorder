@@ -1,0 +1,131 @@
+:root {
+  --bg: #f4f7fb;
+  --card: #ffffff;
+  --text: #16324f;
+  --muted: #577590;
+  --accent: #0a4d68;
+  --accent-2: #1f7a8c;
+  --ok: #2d6a4f;
+  --danger: #c1121f;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(145deg, #e7eef5 0%, #f8fbff 100%);
+  color: var(--text);
+}
+
+.app {
+  max-width: 560px;
+  margin: 3rem auto;
+  padding: 0 1rem 2rem;
+}
+
+h1 { margin-bottom: 0.3rem; }
+
+.subtitle {
+  color: var(--muted);
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid #d8e3ec;
+  border-radius: 14px;
+  padding: 1.5rem;
+  margin: 1rem 0;
+  box-shadow: 0 4px 14px rgba(15, 32, 39, 0.07);
+}
+
+.center-card {
+  text-align: center;
+}
+
+/* Steps list */
+.steps {
+  text-align: left;
+  display: inline-block;
+  margin: 0 0 1.5rem;
+  padding-left: 1.2rem;
+  color: var(--muted);
+  line-height: 2;
+}
+
+.steps strong {
+  color: var(--text);
+}
+
+/* Buttons */
+.btn-row {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+button {
+  border: none;
+  border-radius: 10px;
+  padding: 0.75rem 1.5rem;
+  background: var(--accent);
+  color: #fff;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+button:hover  { background: var(--accent-2); }
+button:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.btn-danger           { background: var(--danger); }
+.btn-danger:hover     { background: #9d0208; }
+
+.hidden { display: none !important; }
+
+/* Status + timer */
+#status {
+  margin: 0.25rem 0 0;
+  font-size: 0.95rem;
+  color: var(--muted);
+  min-height: 1.4em;
+}
+
+.timer {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--danger);
+  margin: 0.5rem 0 0;
+  letter-spacing: 0.05em;
+}
+
+/* Download card */
+#downloadCard p {
+  color: var(--muted);
+  margin: 0 0 0.75rem;
+  font-size: 0.9rem;
+}
+
+.download-btn {
+  display: inline-block;
+  padding: 0.7rem 1.2rem;
+  background: var(--ok);
+  color: #fff;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.download-btn:hover { opacity: 0.88; }
+
+.download-btn-audio { background: var(--accent-2); }
+
+@media (max-width: 600px) {
+  .app { margin-top: 1.5rem; }
+}
